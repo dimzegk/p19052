@@ -1,5 +1,5 @@
 import datetime
-date=raw_input("Εισάγετε την ημερομηνία(ΗΗ/ΜΜ/ΕΕΕΕ): ")
+date=raw_input("Ξ•ΞΉΟƒΞ¬Ξ³ΞµΟ„Ξµ Ο„Ξ·Ξ½ Ξ·ΞΌΞµΟΞΏΞΌΞ·Ξ½Ξ―Ξ± (Ξ—Ξ—/ΞΞ/Ξ•Ξ•Ξ•Ξ•): ")
 date=date.split("/")
 month=int(date[1])
 year=int(date[2])
@@ -10,7 +10,7 @@ print date
 now=datetime.date.today()
 print now
 diff=abs(date-now)
-print "Οι δύο ημερομηνίες απέχουν",diff.days," μέρες ή",(diff.days)*24,"ώρες ή",(diff.days)*24*3600,"δευτερόλεπτα."
+print "ΞΞΉ Ξ΄ΟΞΏ Ξ·ΞΌΞµΟΞΏΞΌΞ·Ξ½Ξ―ΞµΟ‚ Ξ±Ο€Ξ­Ο‡ΞΏΟ…Ξ½",diff.days," ΞΌΞ­ΟΞµΟ‚ Ξ®",(diff.days)*24,"ΟΟΞµΟ‚ Ξ®",(diff.days)*24*3600,"Ξ΄ΞµΟ…Ο„ΞµΟΟΞ»ΞµΟ€Ο„Ξ±."
 from calendar import monthrange
 days=monthrange(year,month)
-print "Ο μήνας της ημερομηνίας που δώσατε έχει",days[1],"μέρες."
+print "Ξ ΞΌΞ®Ξ½Ξ±Ο‚ Ο„Ξ·Ο‚ Ξ·ΞΌΞµΟΞΏΞΌΞ·Ξ½Ξ―Ξ±Ο‚ Ο€ΞΏΟ… Ξ΄ΟΟƒΞ±Ο„Ξµ Ξ­Ο‡ΞµΞΉ",days[1],"ΞΌΞ­ΟΞµΟ‚."
