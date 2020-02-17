@@ -1,17 +1,13 @@
 with open("numbers.txt") as f:
     numbers=f.read().split(",")
-x=raw_input("Εισάγετε μία 6αδα αριθμών: ")
+x=raw_input("Ξ•ΞΉΟƒΞ¬Ξ³ΞµΟ„Ξµ ΞΌΞ―Ξ± 6Ξ±Ξ΄Ξ± Ξ±ΟΞΉΞΈΞΌΟΞ½: ")
 count=0
 from collections import Counter
 for i in range (0,len(numbers)):
     common=(Counter(x) & Counter(numbers[i]))
     summ=(sum(common.values()))
     if summ==4:
-        print "Η τετράδα",numbers[i],"είναι διαθέσιμη για τους 6 αριθμούς."
+        print "Ξ— Ο„ΞµΟ„ΟΞ¬Ξ΄Ξ±",numbers[i],"ΞµΞ―Ξ½Ξ±ΞΉ Ξ΄ΞΉΞ±ΞΈΞ­ΟƒΞΉΞΌΞ· Ξ³ΞΉΞ± Ο„ΞΏΟ…Ο‚ 6 Ξ±ΟΞΉΞΈΞΌΞΏΟΟ‚."
         count=+1
 if count==0:
-    print "Δεν υπάρχει διαθέσιμη 4αδα."
-
-
-    
-
+    print "Ξ”ΞµΞ½ Ο…Ο€Ξ¬ΟΟ‡ΞµΞΉ Ξ΄ΞΉΞ±ΞΈΞ­ΟƒΞΉΞΌΞ· 4Ξ¬Ξ΄Ξ±."
