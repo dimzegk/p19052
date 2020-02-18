@@ -1,10 +1,9 @@
 def bill():
-    products=raw_input("Εισάγετε τις εγγραφές του λεξικού με τις αγορές σε λίστα.Π.χ.[['γάλα',1.50]]: ")
-    products=products.replace("(","").replace(")","").replace("[","").replace("]","").replace(":",",").replace("'","").replace('"','').replace("€","")
+    products=raw_input("Ξ•ΞΉΟƒΞ¬Ξ³ΞµΟ„Ξµ Ο„ΞΉΟ‚ ΞµΞ³Ξ³ΟΞ±Ο†Ξ­Ο‚ Ο„ΞΏΟ… Ξ»ΞµΞΎΞΉΞΊΞΏΟ ΞΌΞµ Ο„ΞΉΟ‚ Ξ±Ξ³ΞΏΟΞ­Ο‚ ΟƒΞµ Ξ»Ξ―ΟƒΟ„Ξ±.(Ξ .Ο‡.[['Ξ³Ξ¬Ξ»Ξ±',1.50]]): ")
+    products=products.replace("(","").replace(")","").replace("[","").replace("]","").replace(":",",").replace("'","").replace('"','').replace("β‚¬","")
     products=products.split(",")
     products={products[i]: float(products[i+1]) for i in range(0,len(products),2)}
-    tax=raw_input("Εισάγετε το ποσοστό φόρου(Π.χ. 10%): ")
+    tax=raw_input("Ξ•ΞΉΟƒΞ¬Ξ³ΞµΟ„Ξµ Ο„ΞΏ Ο€ΞΏΟƒΞΏΟƒΟ„Ο Ο†ΟΟΞΏΟ…(Ξ .Ο‡. 10%): ")
     tax=float(tax.strip('%'))/100
     bill=sum(products.values())+sum(products.values())*tax
-    print "Το ποσό πληρωμής είναι",round(bill,2),"€."
-    
+    print "Ξ¤ΞΏ Ο€ΞΏΟƒΟ Ο€Ξ»Ξ·ΟΟ‰ΞΌΞ®Ο‚ ΞµΞ―Ξ½Ξ±ΞΉ",round(bill,2),"β‚¬."
